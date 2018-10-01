@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="2497b57c-b349-4074-87e9-a0072ab1fe97" 
+        solutionId="2497b57c-b349-4074-87e9-a0072ab1fe97" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="CareerFair"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="32394317-f472-4a8b-a1b1-0872a6e5b945" />
+  </features>
+</package>
