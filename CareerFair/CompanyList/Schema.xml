@@ -9,7 +9,7 @@
       </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
     <Fields>
       
-    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="Company" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /><Field Name="Email" ID="{761f1c8f-47e9-4269-bc83-0d2b6510140f}" DisplayName="Email" Type="Text" Required="TRUE" /></Fields>
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Company" DisplayName="Company" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /><Field Name="Email" ID="{761f1c8f-47e9-4269-bc83-0d2b6510140f}" DisplayName="Email" Type="Text" Required="TRUE" /></Fields>
     <Views>
       
       

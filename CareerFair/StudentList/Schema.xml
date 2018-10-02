@@ -4,12 +4,20 @@
     <ContentTypes>
       
       
-    <ContentType ID="0x0100e219895f9ff24d5ab82a4c2d1da41250" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" /><FieldRef ID="{61a73127-0a2c-4d29-9811-edbefa6c9717}" Name="FullName1" /></FieldRefs></ContentType><ContentTypeRef ID="0x01">
+    <ContentType ID="0x0100e219895f9ff24d5ab82a4c2d1da41250" Name="ListFieldsContentType">
+      <FieldRefs>
+        <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="FullName" />
+        <FieldRef ID="{61a73127-0a2c-4d29-9811-edbefa6c9717}" Name="Email" />
+      </FieldRefs>
+    </ContentType>
+      <ContentTypeRef ID="0x01">
         <Folder TargetName="Item" />
-      </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0120" /></ContentTypes>
     <Fields>
-      
-    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="Email" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /><Field Name="FullName1" ID="{61a73127-0a2c-4d29-9811-edbefa6c9717}" DisplayName="FullName" Type="Text" Required="TRUE" /></Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Email" DisplayName="Email" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Email" MaxLength="255" />
+      <Field Name="FullName" ID="{61a73127-0a2c-4d29-9811-edbefa6c9717}" DisplayName="FullName" Type="Text" Required="TRUE" />
+    </Fields>
     <Views>
       
       

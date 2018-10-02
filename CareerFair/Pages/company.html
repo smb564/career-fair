@@ -1,0 +1,59 @@
+﻿<div class="container-fluid">
+
+    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+
+        <div class="alert alert-info" role="alert">
+            <p>
+                <strong>
+                    Hello {{data.user.name}}!
+                </strong>
+            </p>
+
+            <p>
+                Following are the CVs of the students who have applied for your company. You can download them from the link provided in front of each student.
+            </p>
+        </div>
+
+        <div class="panel panel-default" ng-cloak>
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    CVs submitted for '{{data.user.company}}'
+                </h4>
+            </div>
+
+            <div class="panel-body">
+                <div class="container-fluid">
+
+                    <div class="alert alert-info" ng-show="data.cvs.length == 0">
+                        No CV has been submitted to your company yet.
+                    </div>
+
+                    <div class="table-responsive" ng-show="data.cvs.length != 0">
+
+                        <table id="cvTable" class="table table-hover table-condensed table-striped display" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>CV</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr ng-repeat="cv in data.cvs">
+                                    <td>{{cv.student.name}}</td>
+                                    <td>
+                                        <a href="{{cv.link}}" target="_blank">Download ({{cv.file}})</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

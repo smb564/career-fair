@@ -1,11 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package dslVersion="1.0.0.0" 
-        Id="2497b57c-b349-4074-87e9-a0072ab1fe97" 
-        solutionId="2497b57c-b349-4074-87e9-a0072ab1fe97" 
-        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
-        name="CareerFair"
-        sharePointProductVersion="16.0">
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="2497b57c-b349-4074-87e9-a0072ab1fe97" solutionId="2497b57c-b349-4074-87e9-a0072ab1fe97" resetWebServer="false" sharePointProductVersion="16.0" name="CareerFair" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
   <features>
-        <featureReference itemId="32394317-f472-4a8b-a1b1-0872a6e5b945" />
+    <featureReference itemId="32394317-f472-4a8b-a1b1-0872a6e5b945" />
+    <featureReference itemId="0b215aed-5645-42e6-af10-41dec0e6db43" />
   </features>
 </package>

@@ -46,12 +46,49 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Features\Feature2\Feature2.Template.xml">
+      <DependentUpon>Feature2.feature</DependentUpon>
+    </Content>
+    <Content Include="Pages\admin.html" />
+    <Content Include="Pages\company.html" />
+    <Content Include="Pages\home.html" />
+    <Content Include="Pages\student.html" />
+    <Content Include="Scripts\App\admin.controller.js" />
+    <Content Include="Scripts\App\app.js" />
+    <Content Include="Scripts\App\company.controller.js" />
+    <Content Include="Scripts\App\company.service.js" />
+    <Content Include="Scripts\App\cv.service.js" />
+    <Content Include="Scripts\App\home.controller.js" />
+    <Content Include="Scripts\App\student.controller.js" />
+    <Content Include="Scripts\App\student.service.js" />
+    <Content Include="Scripts\App\user.service.js" />
+    <Content Include="StudentList\Elements.xml" />
+    <Content Include="StudentList\Schema.xml" />
+    <Content Include="StudentList\StudentListInstance\Elements.xml" />
+    <None Include="CompanyList\CompanyListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{86d4edd5-05c6-4644-9acc-efc2ae1708a6}</SharePointProjectItemId>
+    </None>
+    <None Include="CompanyList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4d0a7d9c-86bb-413e-8b4f-76a30ca3dd90}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature2\Feature2.feature">
+      <FeatureId>{0b215aed-5645-42e6-af10-41dec0e6db43}</FeatureId>
+    </None>
     <None Include="packages.config" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{0a7a19cb-dfb4-4cbd-8722-3c6b52c02660}</SharePointProjectItemId>
     </None>
+    <Content Include="CompanyList\CompanyListInstance\Elements.xml" />
+    <Content Include="CompanyList\Elements.xml" />
+    <Content Include="CompanyList\Schema.xml" />
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
+    <None Include="StudentList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{923f36b2-632a-42e5-a8c1-72c22e8a878f}</SharePointProjectItemId>
+    </None>
+    <None Include="StudentList\StudentListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0e47b37d-3276-4573-b964-d3474007b0f9}</SharePointProjectItemId>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-1.9.1.min.map" />
