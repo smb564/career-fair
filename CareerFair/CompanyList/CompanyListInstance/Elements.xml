@@ -1,4 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <ListInstance Title="CompanyList" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/CompanyList" Description="My List Instance"></ListInstance>
+  <ListInstance Title="CompanyList" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/CompanyList" Description="My List Instance">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Company">Sysco Labs</Field>
+          <Field Name="Email">sysco@uomcse.lk</Field>
+        </Row>
+        <Row>
+          <Field Name="Company">Virtusa</Field>
+          <Field Name="Email">virtusa@uomcse.lk</Field>
+        </Row>
+        <Row>
+          <Field Name="Company">WSO2</Field>
+          <Field Name="Email">wso2@uomcse.lk</Field>
+        </Row>
+        <Row>
+          <Field Name="Company">Eminda</Field>
+          <Field Name="Email">eminda.14@uomcse.lk</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
 </Elements>

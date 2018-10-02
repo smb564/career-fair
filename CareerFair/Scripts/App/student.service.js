@@ -21,7 +21,8 @@
                 //console.log(student.get_fieldValues());
                 students.push({
                     email: student.get_item('Email'),
-                    name: student.get_item('FullName')
+                    name: student.get_item('FullName'),
+                    skills: student.get_item("Skills")
                 });
             }
 
@@ -58,6 +59,7 @@
                     var newItem = studentList.addItem(itemCreationInfo);
                     newItem.set_item("Email", students[i].email);
                     newItem.set_item("FullName", students[i].name);
+                    newItem.set_item("Skills", students[i].skills);
                     newItem.update();
                 }
 

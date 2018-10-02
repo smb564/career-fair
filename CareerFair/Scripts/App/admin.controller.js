@@ -64,10 +64,19 @@
                 var students = [];
                 for (var i in lines) {
                     var parts = lines[i].split(",");
-                    students.push({
-                        email: parts[0].trim(),
-                        name: parts[1].trim()
-                    });
+                    if (parts.length == 2){
+                        students.push({
+                            email: parts[0].trim(),
+                            name: parts[1].trim(),
+                            skills: ""
+                        });
+                    } else {
+                        students.push({
+                            email: parts[0].trim(),
+                            name: parts[1].trim(),
+                            skills: parts[2].trim()
+                        });
+                    }
                 }
 
                 studentService.uploadStudents(students, function () {

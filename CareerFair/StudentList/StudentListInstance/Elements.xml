@@ -1,4 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <ListInstance Title="StudentList" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/StudentList" Description="My List Instance"></ListInstance>
+  <ListInstance Title="StudentList" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/StudentList" Description="My List Instance">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Email">eminda.14@uomcse.lk</Field>
+          <Field Name="FullName">Eminda SSS</Field>
+          <Field Name="Skills">Java; Angular;</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
 </Elements>

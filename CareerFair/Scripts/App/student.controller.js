@@ -16,6 +16,12 @@
                 companies: companyService.companies
             };
 
+            // add <GENERAL> to companies, these CVs will be browsable for all the companies
+            $scope.data.companies.unshift({
+                name: "GENERAL",
+                email: ""
+            });
+
             var clientContext = SP.ClientContext.get_current();
             var appWebUrl = userService.appWebUrl;
             var hostWebUrl = userService.hostWebUrl;
