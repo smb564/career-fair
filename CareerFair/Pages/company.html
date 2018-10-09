@@ -13,13 +13,13 @@
                 Following are the CVs of the students who have applied for your company. You can download them from the link provided in front of each student.
                 <br />
 
-                <b>Note - </b>You can use "Browse All CVs" option to see the CVs of all the students from the batch who opted to upload a general CV as well    . You can use the search box there to filter CVs by skills.
+                <b>Browse All CVs - </b>You can use "Browse All CVs" option to see the CVs of all students who opted to upload a general CV as well. They may not necessarily have applied to your company but you can use this feature to find students with specific skills. You can use the search box there to filter CVs by skills.
             </p>
         </div>
 
         <hr />
-        <input ng-show="viewCompany" type="button" class="btn btn-primary" value="Browse All CVs" ng-click="toggleViewCompany()"/>
-        <input ng-hide="viewCompany" type="button" class="btn btn-primary" value="Browse Company CVs" ng-click="toggleViewCompany()" />
+        <input ng-show="viewCompany" type="button" class="btn" value="Browse All CVs" ng-click="toggleViewCompany()"/>
+        <input ng-hide="viewCompany" type="button" class="btn" value="Browse Company CVs" ng-click="toggleViewCompany()" />
         <hr />
 
         <div ng-show="viewCompany" class="panel panel-default" ng-cloak>
@@ -72,11 +72,11 @@
             <div class="panel-body">
                 <div class="container-fluid">
 
-                    <div class="alert alert-info" ng-show="data.cvs.length == 0">
+                    <div class="alert alert-info" ng-show="data.general_cvs.length == 0">
                         No CV has been submitted yet.
                     </div>
 
-                    <div class="table-responsive" ng-show="data.cvs.length != 0">
+                    <div class="table-responsive" ng-show="data.general_cvs.length != 0">
 
                         <table id="allCvTable" class="table table-hover table-condensed table-striped display" cellspacing="0">
                             <thead>

@@ -1,7 +1,7 @@
 ﻿angular.module("careersDayApp")
     .controller("companyController", ["$scope", "$state", "$interval", "userService", "cvService", "studentService",
         function ($scope, $state, $interval, userService, cvService, studentService) {
-            if (!userService.userLoaded) {
+            if (!userService.userLoaded || !studentService.studentsLoaded) {
                 $state.transitionTo("home");
             }
 
