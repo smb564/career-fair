@@ -95,7 +95,7 @@
                                 <td>{{student.email}}</td>
                                 <td>{{student.name}}</td>
                                 <td>{{student.skills}}</td>
-                                <td>{{student.achievements}}</td>
+                                <td ng-bind-html="student.achievements"></td>
                             </tr>
                         </tbody>
                     </table>

@@ -64,6 +64,11 @@
                 var students = [];
                 for (var i in lines) {
                     var parts = lines[i].split(",");
+
+                    if (parts.length !== 4) {
+                        alert("Please make sure the data is comma separated. E.g. email,name,skill_1;skill_2;,achievement_1;achivement_2;")
+                        $state.reload();
+                    }
                     if (parts.length == 2){
                         students.push({
                             email: parts[0].trim(),

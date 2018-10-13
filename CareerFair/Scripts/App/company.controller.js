@@ -66,7 +66,6 @@
                 $('#allCvTable tfoot th').each(function () {
                     var title = $(this).text();
                     if (title != "") {
-                        console.log(title);
                         // no need of an option to search for CV
                         $(this).html('<input style="width: 100%; box-sizing: border-box; padding: 3px;" type="text" placeholder="Search ' + title + '" />');
                     }
