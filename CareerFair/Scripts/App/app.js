@@ -4,7 +4,8 @@
     // Custom modules 
 
     // 3rd Party Modules
-    'ui.router'
+    'ui.router',
+    'ngSanitize'
 ]);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
