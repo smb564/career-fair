@@ -7,6 +7,7 @@
           <Field Name="Email">eminda.14@uomcse.lk</Field>
           <Field Name="FullName">Eminda SSS</Field>
           <Field Name="Skills">Java; Angular;</Field>
+          <Field Name="Achievements">Island rank 10th; sadasd; sadasdas;</Field>
         </Row>
       </Rows>
     </Data>

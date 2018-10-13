@@ -78,24 +78,7 @@
 
                     <div class="table-responsive" ng-show="data.general_cvs.length != 0">
 
-                        <table id="allCvTable" class="table table-hover table-condensed table-striped display" cellspacing="0">
-                            <thead>
-                                <tr>
-                                    <th>Student Name</th>
-                                    <th>Skills</th>
-                                    <th>CV</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr ng-repeat="cv in data.general_cvs">
-                                    <td>{{cv.student.name}}</td>
-                                    <td>{{student2skill[cv.student.email]}}</td>
-                                    <td>
-                                        <a href="{{cv.link}}" target="_blank">Download ({{cv.file}})</a>
-                                    </td>
-                                </tr>
-                            </tbody>
+                        <table id="allCvTable" class="table table-hover table-condensed table-striped display" cellspacing="0" style="width: 100%;">
                         </table>
 
                     </div>

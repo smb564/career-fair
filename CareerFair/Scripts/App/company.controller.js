@@ -16,7 +16,6 @@
             };
 
             $scope.viewCompany = true;
-            $scope.student2skill = {};
 
             $scope.toggleViewCompany = function () {
                 $scope.viewCompany = !$scope.viewCompany;
@@ -35,19 +34,37 @@
 
             cvService.loadCVs(hostWebUrl, "GENERAL", function (cvs) {
                 console.log("CompanyController: %d CVs Loaded (GENERAL)", cvs.length);
-                $scope.data.general_cvs = cvs;
 
-                studentService.loadStudents(function (students) {
-                    for (var i = 0; i < students.length; i++) {
-                        $scope.student2skill[students[i].email] = students[i].skills;
+                $scope.$apply(function () {
+
+                    $scope.data.general_cvs = cvs;
+
+                    dataSet = [];
+
+                    for (var i = 0; i < cvs.length; i++) {
+                        dataSet.push([cvs[i].student.name, cvs[i].student.skills, { file: cvs[i].file, link: cvs[i].link }]);
                     }
 
-                    $scope.$apply();
-                    
-                    $('#allCvTable').DataTable();
+                    $("#allCvTable").DataTable({
+                        data: dataSet,
+                        columns: [
+                            { title: "Student Name" },
+                            { title: "Skills" },
+                            {
+                                title: "CV",
+                                render: function (data, type, row, meta) {
+                                    if (type === 'display') {
+                                        data = '<a href="' + data.link + '" target="_blank">' + 'Download (' + data.file + ')</a>';
+                                    }
+
+                                    return data;
+                                }
+                            }
+                        ]
+                    });
 
                 });
-        
-            });
+
+                });
 
         }]);

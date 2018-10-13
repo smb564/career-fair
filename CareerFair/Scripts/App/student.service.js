@@ -22,7 +22,8 @@
                 students.push({
                     email: student.get_item('Email'),
                     name: student.get_item('FullName'),
-                    skills: student.get_item("Skills")
+                    skills: student.get_item("Skills"),
+                    achievements: student.get_item("Achievements")
                 });
             }
 
