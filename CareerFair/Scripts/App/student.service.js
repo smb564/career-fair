@@ -61,6 +61,7 @@
                     newItem.set_item("Email", students[i].email);
                     newItem.set_item("FullName", students[i].name);
                     newItem.set_item("Skills", students[i].skills);
+                    newItem.set_item("Achievements", students[i].achievements);
                     newItem.update();
                 }
 

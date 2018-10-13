@@ -68,13 +68,15 @@
                         students.push({
                             email: parts[0].trim(),
                             name: parts[1].trim(),
-                            skills: ""
+                            skills: "",
+                            achievements: ""
                         });
                     } else {
                         students.push({
                             email: parts[0].trim(),
                             name: parts[1].trim(),
-                            skills: parts[2].trim()
+                            skills: parts[2].trim(),
+                            achievements: parts[3].trim()
                         });
                     }
                 }

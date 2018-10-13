@@ -30,41 +30,58 @@
                 $scope.$apply();
 
                 $('#cvTable').DataTable();
+
             });
 
             cvService.loadCVs(hostWebUrl, "GENERAL", function (cvs) {
                 console.log("CompanyController: %d CVs Loaded (GENERAL)", cvs.length);
+                dataSet = [];
 
-                $scope.$apply(function () {
+                $scope.data.general_cvs = cvs;
+                $scope.$apply();
 
-                    $scope.data.general_cvs = cvs;
+                for (var i = 0; i < cvs.length; i++) {
+                    dataSet.push([cvs[i].student.name, cvs[i].student.skills, cvs[i].student.achievements, { file: cvs[i].file, link: cvs[i].link }]);
+                }
 
-                    dataSet = [];
-
-                    for (var i = 0; i < cvs.length; i++) {
-                        dataSet.push([cvs[i].student.name, cvs[i].student.skills, { file: cvs[i].file, link: cvs[i].link }]);
-                    }
-
-                    $("#allCvTable").DataTable({
-                        data: dataSet,
-                        columns: [
-                            { title: "Student Name" },
-                            { title: "Skills" },
-                            {
-                                title: "CV",
-                                render: function (data, type, row, meta) {
-                                    if (type === 'display') {
-                                        data = '<a href="' + data.link + '" target="_blank">' + 'Download (' + data.file + ')</a>';
-                                    }
-
-                                    return data;
+                var table = $("#allCvTable").DataTable({
+                    data: dataSet,
+                    columns: [
+                        { title: "Student Name" },
+                        { title: "Skills" },
+                        { title: "Achievements" },
+                        {
+                            title: "CV",
+                            render: function (data, type, row, meta) {
+                                if (type === 'display') {
+                                    data = '<a href="' + data.link + '" target="_blank">' + 'Download (' + data.file + ')</a>';
                                 }
+
+                                return data;
                             }
-                        ]
+                        }
+                    ]
+                });
+
+                $('#allCvTable tfoot th').each(function () {
+                    var title = $(this).text();
+                    if (title != "") {
+                        console.log(title);
+                        // no need of an option to search for CV
+                        $(this).html('<input style="width: 100%; box-sizing: border-box; padding: 3px;" type="text" placeholder="Search ' + title + '" />');
+                    }
+                });
+
+                table.columns().every(function () {
+                    var that = this;
+                    $('input', this.footer()).on('keyup change', function () {
+                        if (that.search() !== this.value) {
+                            that
+                              .search(this.value)
+                              .draw();
+                        }
                     });
-
                 });
 
-                });
-
+            });
         }]);

@@ -10,14 +10,14 @@
       <FieldRefs>
         
         
-      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Email" /><FieldRef ID="{61a73127-0a2c-4d29-9811-edbefa6c9717}" Name="FullName" /><FieldRef ID="{3c3e08c0-d9ae-4079-a9a1-dd7660b20b27}" Name="Skills" /><FieldRef ID="{f4482d24-df64-4aee-8519-e77b707cf74c}" Name="Achi" /></FieldRefs>
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Email" /><FieldRef ID="{61a73127-0a2c-4d29-9811-edbefa6c9717}" Name="FullName" /><FieldRef ID="{3c3e08c0-d9ae-4079-a9a1-dd7660b20b27}" Name="Skills" /><FieldRef ID="{f4482d24-df64-4aee-8519-e77b707cf74c}" Name="Achievements" /></FieldRefs>
     </ContentType><ContentTypeRef ID="0x01">
         <Folder TargetName="Item" />
       </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
     <Fields>
       
       
-    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Email" DisplayName="Email" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Email" MaxLength="255" /><Field Name="FullName" ID="{61a73127-0a2c-4d29-9811-edbefa6c9717}" DisplayName="FullName" Type="Text" Required="TRUE" /><Field Name="Skills" ID="{3c3e08c0-d9ae-4079-a9a1-dd7660b20b27}" DisplayName="Skills" Type="Text" /><Field Name="Achi" ID="{f4482d24-df64-4aee-8519-e77b707cf74c}" DisplayName="Achievements" Type="Text" /></Fields>
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Email" DisplayName="Email" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Email" MaxLength="255" /><Field Name="FullName" ID="{61a73127-0a2c-4d29-9811-edbefa6c9717}" DisplayName="FullName" Type="Text" Required="TRUE" /><Field Name="Skills" ID="{3c3e08c0-d9ae-4079-a9a1-dd7660b20b27}" DisplayName="Skills" Type="Text" /><Field Name="Achievements" ID="{f4482d24-df64-4aee-8519-e77b707cf74c}" DisplayName="Achievements" Type="Text" /></Fields>
     <Views>
       
       
@@ -45,7 +45,7 @@
         <RowLimit Paged="TRUE">30</RowLimit>
         <ViewFields>
           
-        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="Skills" /><FieldRef Name="Achi" /></ViewFields>
+        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="Skills" /><FieldRef Name="Achievements" /></ViewFields>
         <Query>
           <OrderBy>
             
