@@ -63,11 +63,11 @@
                 var lines = csv.split("\n");
                 var students = [];
                 for (var i in lines) {
-                    var parts = lines[i].split(",");
+                    var parts = lines[i].split("\t");
 
                     if (parts.length !== 4) {
-                        alert("Please make sure the data is comma separated. E.g. email,name,skill_1;skill_2;,achievement_1;achivement_2;")
-                        $state.reload();
+                        NotificationService.showErrorMessage("TSV Format Error", "Please make sure the data is tab separated. E.g. email    name    skill_1,skill_2 achievement_1<br/>achivement_2")
+                        //$state.reload();
                         return;
                     }
                     if (parts.length == 2){

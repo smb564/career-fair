@@ -41,6 +41,10 @@
                 $scope.$apply();
 
                 for (var i = 0; i < cvs.length; i++) {
+                    if (cvs[i].student == undefined) {
+                        continue;
+                    }
+
                     dataSet.push([cvs[i].student.name, cvs[i].student.skills, cvs[i].student.achievements, { file: cvs[i].file, link: cvs[i].link }]);
                 }
 
